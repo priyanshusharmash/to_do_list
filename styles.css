@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff6a00, #ee0979, #ff6a00, #ff6a00);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite; /* Increased gradient speed to 5 seconds */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ff6b6b;
+    border-radius: 5px;
+    width: 70%;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ff3d3d;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #ff3d3d;
+    transform: scale(1.05);
+}
+
+.task-list {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0; /* Added padding reset */
+}
+
+.task-list li {
+    background: rgba(100, 100, 250, 0.3);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.task-list li:hover {
+    background: rgba(100, 100, 250, 0.5);
+    transform: scale(1.02);
+}
+
+.task-list li.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+/* 
+Explanation of CSS:
+Global Reset:
+
+The * selector resets margins and paddings, and applies box-sizing: border-box to all elements, ensuring padding and borders are included in the total width and height.
+Body Styles:
+
+Sets the font, a vibrant gradient background that changes every 5 seconds, and centers content both vertically and horizontally.
+Keyframe Animation:
+
+@keyframes gradient: Defines the animation for the background gradient, creating a smooth transition effect.
+Container Styles:
+
+The .container class styles the main content area with a semi-transparent background, rounded corners, padding, and shadow effects.
+Input and Button Styles:
+
+Styles the text input and button for a modern look, including hover effects and focus states.
+Task List Styles:
+
+Styles for the unordered list and list items, including hover effects for interaction and a completed state that applies a strikethrough.
+JavaScript (script.js)
+*/
